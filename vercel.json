@@ -1,8 +1,8 @@
-﻿{
+{
   "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "https://sauditritons.org/$1",
+      "source": "/:path*",
+      "destination": "https://sauditritons.org/:path*",
       "permanent": true
     }
   ]
