@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://sauditritons.org/:path*",
-      "permanent": true
-    }
-  ]
-}

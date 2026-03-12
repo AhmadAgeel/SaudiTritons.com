@@ -1,10 +1,14 @@
-﻿# OS
+# OS
 .DS_Store
 Thumbs.db
 
 # Editor
 .vscode/
 .idea/
+
+# Node/Next
+node_modules/
+.next/
 
 # Build/deploy
 .vercel/

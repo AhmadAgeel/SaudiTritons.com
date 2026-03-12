@@ -1,21 +1,26 @@
-﻿# SaudiTritons.com Redirect
+# SaudiTritons.com Redirect (Next.js)
 
-This repo is a single-purpose redirect property for `SaudiTritons.com`.
+This is a minimal Next.js project deployed on Vercel.
 
-## Behavior
+## Why this setup
 
-- Permanently redirects all paths on `.com` to `.org`
-- Preserves path/query at the edge when deployed on Vercel (`vercel.json`)
-- Includes a polished HTML fallback page (`index.html`) for environments without edge redirects
+- Avoids `vercel.json` parser edge-cases in dashboard imports.
+- Vercel auto-detects Next.js reliably.
+- Permanent redirect logic is in `next.config.mjs`.
+
+## Redirect behavior
+
+All routes on `sauditritons.com` permanently redirect to `https://sauditritons.org` while preserving path and query.
 
 Examples:
 
 - `https://sauditritons.com/` -> `https://sauditritons.org/`
 - `https://sauditritons.com/invite/abc123` -> `https://sauditritons.org/invite/abc123`
 
-## Files
+## Deploy
 
-- `vercel.json`: 301 edge redirect for all routes
-- `index.html`: client-side fallback redirect page with branded UI
-- `_redirects`: Netlify-compatible redirect rule
-- `assets/`: logo + favicon assets
+1. Import this repo in Vercel.
+2. Framework preset should auto-detect as Next.js.
+3. Add domains:
+   - `sauditritons.com`
+   - `www.sauditritons.com`
